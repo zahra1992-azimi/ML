@@ -1,0 +1,93 @@
+---
+title: "Writing R Code with NextGenAI Assistance"
+subtitle: "Email: azimikhalegh.zahra@stud.hs-fresenius.de | Matrikelnummer: 400391308"
+author: "Zahra Azimi Khalegh"
+format: revealjs
+editor: visual
+---
+
+## Why use NextGenAI for R?
+
+- It can draft a short R script.
+- It can explain unfamiliar functions.
+- It can suggest ways to fix errors.
+- The user must still check the code and results.
+
+AI can support coding tasks, but its performance depends on the task and coding style (Weber et al., 2024; Zhao & Fard, 2025).
+
+## A human-checked workflow
+
+1.  Describe the task, data, and expected result.
+2.  Ask for small, commented R code.
+3.  Read and understand the code.
+4.  Run it in R.
+5.  Check whether the output makes sense.
+
+Do not include private or confidential data in prompts.
+
+## Example: average MPG by cylinder group
+
+**Question:** What is the average miles per gallon (mpg) for cars with 4, 6, and 8 cylinders in `mtcars`?
+
+``` r
+# Calculate the average mpg for each cylinder group
+average_mpg <- aggregate(
+  mpg ~ cyl,
+  data = mtcars,
+  FUN = mean
+)
+
+average_mpg
+```
+
+## Check the result
+
+``` r
+# Calculate the same averages using another base R function
+tapply(mtcars$mpg, mtcars$cyl, mean)
+```
+
+Both methods give the same results:
+
+- 4 cylinders: **26.66 mpg**
+- 6 cylinders: **19.74 mpg**
+- 8 cylinders: **15.10 mpg**
+
+Matching results are a useful check, but they do not prove that every part of the analysis is correct.
+
+## What does the code do?
+
+- `mpg ~ cyl` means: calculate mpg for each cylinder group.
+- `data = mtcars` tells R which dataset to use.
+- `FUN = mean` tells R to calculate the average.
+- `tapply()` checks the averages using a second method.
+
+## Limitations and responsible use
+
+- AI-generated code may contain errors or unsuitable assumptions.
+- Check variable names, missing values, and results.
+- Compare the output with reliable documentation.
+- Understand every line of code you submit.
+- Follow your lecturer’s rules for acknowledging AI assistance.
+
+Researchers have also reported errors in AI-generated statistical code (Fakhoury et al., 2024; Winberg et al., 2026).
+
+## Class exercise
+
+Calculate the **median mpg** for each cylinder group in `mtcars`.
+
+- Check the result with a second R method, such as `tapply()`.
+- Explain what the code does.
+- Decide whether the result answers the question.
+
+## References
+
+Fakhoury, S., Naik, A., Sakkas, G., Chakraborty, S., & Lahiri, S. K. (2024). LLM-based test-driven interactive code generation: User study and empirical evaluation. *IEEE Transactions on Software Engineering, 50*(9), 2254–2268. https://doi.org/10.1109/TSE.2024.3428972
+
+Weber, T., Brandmaier, M., Schmidt, A., & Mayer, S. (2024). Significant productivity gains through programming with large language models. *Proceedings of the ACM on Human-Computer Interaction, 8*(EICS). https://doi.org/10.1145/3661145
+
+## References (continued)
+
+Winberg, D., Tsai, E., Tang, T., Xuan, D., Marchi, N., & Shi, L. (2026). Can AI write your code? A case study of ChatGPT’s statistical coding capabilities for quantitative research. *Health Economics Review, 16*. https://doi.org/10.1186/s13561-025-00714-8
+
+Zhao, Z., & Fard, F. (2025). Do current language models support code intelligence for R programming language? *ACM Transactions on Software Engineering and Methodology, 34*(8). https://doi.org/10.1145/3735635
