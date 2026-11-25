@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Data Analysis Project</title>
+</head>
+<body>
+  <h1>Data Analysis Project</h1>
+  <p><a href="handout.html">Open the handout</a></p>
+  <p><a href="presentation.html">Open the presentation</a></p>
+  <p><a href="handout.pdf">Download the handout PDF</a></p>
+  <p><a href="presentation.pdf">Download the presentation PDF</a></p>
+</body>
+</html>
