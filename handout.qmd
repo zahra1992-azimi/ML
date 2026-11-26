@@ -106,6 +106,6 @@ Checklist:
 
 - [x] The PDF and HTML files of the presentation and the handout are published on GitHub Pages.
 
-- [] I submitted a pull request to the repository <https://github.com/hubchev/make_a_pull_request>, where I added my GitHub username and the repository related to this submission to the file <https://github.com/hubchev/make_a_pull_request/dadm_ws26.md>.
+- [x] I submitted a pull request to the repository <https://github.com/hubchev/make_a_pull_request>, where I added my GitHub username and the repository related to this submission to the file <https://github.com/hubchev/make_a_pull_request/dadm_ws26.md>.
 
 Zahra Azimi Khalegh,25.11,2026,Cologne
